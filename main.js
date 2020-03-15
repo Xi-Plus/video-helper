@@ -8,7 +8,7 @@ javascript: (function() {
 	function ani_gamer_com_tw() {
 		document.addEventListener('keyup', function(e) {
 			if (e.altKey) {
-				if (e.which == 90) { // Z 進度條
+				if (e.which == 90) { /* Z 進度條 */
 					if ($('.vjs-control-bar').is(':hidden')) {
 						$('.vjs-big-play-button').show();
 						$('.vjs-control-bar').show();
@@ -18,7 +18,7 @@ javascript: (function() {
 						$('.vjs-control-bar').hide();
 						$('.control-bar-mask').hide();
 					}
-				} else if (e.which == 88) { // X 彈幕
+				} else if (e.which == 88) { /* X 彈幕 */
 					$('#danmuToggle').click();
 				}
 			}
@@ -39,7 +39,7 @@ javascript: (function() {
 	function i_animeone_me() {
 		document.addEventListener('keyup', function(e) {
 			if (e.altKey) {
-				if (e.which == 90) { // Z 進度條
+				if (e.which == 90) { /* Z 進度條 */
 					if (document.getElementsByClassName('vjs-control-bar')[0].style.display !== 'none') {
 						document.getElementsByClassName('vjs-control-bar')[0].style.display = 'none';
 					} else {
@@ -53,7 +53,7 @@ javascript: (function() {
 	function v_anime1_me() {
 		document.addEventListener('keyup', function(e) {
 			if (e.altKey) {
-				if (e.which == 90) { // Z 進度條
+				if (e.which == 90) { /* Z 進度條 */
 					if (document.getElementsByClassName('jw-controlbar')[0].style.display !== 'none') {
 						document.getElementsByClassName('jw-controlbar')[0].style.display = 'none';
 					} else {
