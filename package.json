@@ -1,0 +1,12 @@
+{
+  "title": "video-helper",
+  "name": "video-helper",
+  "private": true,
+  "repository": "Xi-Plus/video-helper",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "6.8.0"
+  }
+}
