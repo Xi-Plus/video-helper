@@ -36,6 +36,23 @@ javascript: (function() {
 		});
 	}
 
+	function fenglin_tv() {
+		var framedoc = document.getElementsByName('momoplayer')[0].contentDocument;
+		framedoc.addEventListener('keyup', function(e) {
+			if (e.altKey) {
+				if (e.which == 90) { /* Z 進度條 */
+					if (framedoc.getElementsByClassName('jw-controls')[0].style.display !== 'none') {
+						framedoc.getElementsByClassName('jw-controls')[0].style.display = 'none';
+						framedoc.getElementsByClassName('jw-controls-backdrop')[0].style.display = 'none';
+					} else {
+						framedoc.getElementsByClassName('jw-controls')[0].style.display = '';
+						framedoc.getElementsByClassName('jw-controls-backdrop')[0].style.display = '';
+					}
+				}
+			}
+		});
+	}
+
 	function i_animeone_me() {
 		document.addEventListener('keyup', function(e) {
 			if (e.altKey) {
@@ -68,6 +85,7 @@ javascript: (function() {
 		switch (window.location.host) {
 			case 'ani.gamer.com.tw': ani_gamer_com_tw(); break;
 			case 'anime1.me': anime1_me(); break;
+			case 'fenglin.tv': fenglin_tv(); break;
 			case 'i.animeone.me': i_animeone_me(); break;
 			case 'v.anime1.me': v_anime1_me(); break;
 			default:
