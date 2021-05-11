@@ -1,12 +1,13 @@
 {
-  "title": "video-helper",
-  "name": "video-helper",
-  "private": true,
-  "repository": "Xi-Plus/video-helper",
-  "scripts": {
-    "lint": "eslint ."
-  },
-  "devDependencies": {
-    "eslint": "7.4.0"
-  }
+	"title": "video-helper",
+	"name": "video-helper",
+	"private": true,
+	"repository": "Xi-Plus/video-helper",
+	"scripts": {
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	},
+	"devDependencies": {
+		"eslint": "^7.25.0"
+	}
 }
