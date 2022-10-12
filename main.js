@@ -83,7 +83,7 @@ javascript: (function() {
 	
 	function youtube() {
 		for (let link of document.querySelectorAll('a')) {
-			m = link.href.match(/^https:\/\/www.youtube.com\/shorts\/(.+)$/, link.href);
+			let m = link.href.match(/^https:\/\/www.youtube.com\/shorts\/(.+)$/, link.href);
 			if (m) {
 				link.href = 'https://www.youtube.com/watch?v=' + m[1];
 			}
