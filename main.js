@@ -80,6 +80,15 @@ javascript: (function() {
 			}
 		});
 	}
+	
+	function youtube() {
+		for (let link of document.querySelectorAll('a')) {
+			m = link.href.match(/^https:\/\/www.youtube.com\/shorts\/(.+)$/, link.href);
+			if (m) {
+				link.href = 'https://www.youtube.com/watch?v=' + m[1];
+			}
+		}
+	}
 
 	function main() {
 		switch (window.location.host) {
@@ -88,6 +97,7 @@ javascript: (function() {
 			case 'fenglin.tv': fenglin_tv(); break;
 			case 'i.animeone.me': i_animeone_me(); break;
 			case 'v.anime1.me': v_anime1_me(); break;
+			case 'www.youtube.com': youtube(); break;
 			default:
 				alert('Not supported site.');
 		}
