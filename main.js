@@ -5,10 +5,26 @@ javascript: (function() {
 	}
 	window.video_helper_loaded = true;
 
-	function ani_gamer_com_tw() {
-		document.addEventListener('keyup', function(e) {
+	function video_callback(e) {
+		if (e.target.getElementsByTagName('video').length === 1) {
+			var video = e.target.getElementsByTagName('video')[0];
 			if (e.altKey) {
-				if (e.which == 90) { /* Z 進度條 */
+				if (e.key == 'ArrowRight') {
+					e.preventDefault();
+					video.currentTime += 80;
+				} else if (e.key == 'ArrowLeft') {
+					e.preventDefault();
+					video.currentTime -= 80;
+				}
+			}
+		}
+	}
+
+	function ani_gamer_com_tw() {
+		document.addEventListener('keydown', function(e) {
+			console.log(e);
+			if (e.altKey) {
+				if (e.key == 'z') { /* Z 進度條 */
 					if ($('.vjs-control-bar').is(':hidden')) {
 						$('.vjs-big-play-button').show();
 						$('.vjs-control-bar').show();
@@ -18,7 +34,7 @@ javascript: (function() {
 						$('.vjs-control-bar').hide();
 						$('.control-bar-mask').hide();
 					}
-				} else if (e.which == 88) { /* X 彈幕 */
+				} else if (e.key == 'x') { /* X 彈幕 */
 					$('#danmuToggle').click();
 				}
 			}
@@ -80,7 +96,7 @@ javascript: (function() {
 			}
 		});
 	}
-	
+
 	function youtube() {
 		for (let link of document.querySelectorAll('a')) {
 			let m = link.href.match(/^https:\/\/www.youtube.com\/shorts\/(.+)$/, link.href);
@@ -100,7 +116,10 @@ javascript: (function() {
 			case 'www.youtube.com': youtube(); break;
 			default:
 				alert('Not supported site.');
+				return;
 		}
+
+		document.addEventListener('keydown', video_callback);
 	}
 
 	main();
