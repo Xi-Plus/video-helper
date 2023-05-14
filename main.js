@@ -29,10 +29,12 @@ javascript: (function() {
 						$('.vjs-big-play-button').show();
 						$('.vjs-control-bar').show();
 						$('.control-bar-mask').show();
+						$('.top-tool-bar').show();
 					} else {
 						$('.vjs-big-play-button').hide();
 						$('.vjs-control-bar').hide();
 						$('.control-bar-mask').hide();
+						$('.top-tool-bar').hide();
 					}
 				} else if (e.key == 'x') { /* X 彈幕 */
 					$('#danmuToggle').click();
