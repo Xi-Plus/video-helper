@@ -22,7 +22,6 @@ javascript: (function() {
 
 	function ani_gamer_com_tw() {
 		document.addEventListener('keydown', function(e) {
-			console.log(e);
 			if (e.altKey) {
 				if (e.key == 'z') { /* Z 進度條 */
 					if ($('.vjs-control-bar').is(':hidden')) {
