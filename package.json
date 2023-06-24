@@ -4,10 +4,12 @@
 	"private": true,
 	"repository": "Xi-Plus/video-helper",
 	"scripts": {
+		"build": "minify main.js > main.min.js",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
 	},
 	"devDependencies": {
-		"eslint": "^8.1.0"
+		"eslint": "^8.1.0",
+		"minify": "^10.2.0"
 	}
 }
