@@ -99,6 +99,9 @@ javascript: (function() {
 	}
 
 	function youtube() {
+		if (location.href.includes('www.youtube.com/shorts/')) {
+			document.location = location.href.replace('www.youtube.com/shorts/', 'www.youtube.com/watch/');
+		}
 		for (let link of document.querySelectorAll('a')) {
 			let m = link.href.match(/^https:\/\/www.youtube.com\/shorts\/(.+)$/, link.href);
 			if (m) {
