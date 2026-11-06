@@ -9,7 +9,9 @@
 		"lint:fix": "eslint . --fix"
 	},
 	"devDependencies": {
-		"eslint": "^8.1.0",
+		"@eslint/js": "^10.0.1",
+		"eslint": "^10.14.0",
+		"globals": "^17.14.0",
 		"minify": "^15.3.1"
 	}
 }
