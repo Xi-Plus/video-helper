@@ -24,7 +24,7 @@ javascript: (function() {
 	function ani_gamer_com_tw() {
 		document.addEventListener('keydown', function(e) {
 			if (e.altKey) {
-				if (e.key == 'z') { /* Z 進度條 */
+				if (e.code == 'KeyZ') { /* Z 進度條 */
 					if ($('.vjs-control-bar').is(':hidden')) {
 						$('.vjs-big-play-button').show();
 						$('.vjs-control-bar').show();
@@ -36,7 +36,7 @@ javascript: (function() {
 						$('.control-bar-mask').hide();
 						$('.top-tool-bar').hide();
 					}
-				} else if (e.key == 'x') { /* X 彈幕 */
+				} else if (e.code == 'KeyX') { /* X 彈幕 */
 					$('#danmuToggle').click();
 				}
 			}
