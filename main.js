@@ -58,7 +58,7 @@ javascript: (function() {
 		var framedoc = document.getElementsByName('momoplayer')[0].contentDocument;
 		framedoc.addEventListener('keyup', function(e) {
 			if (e.altKey) {
-				if (e.which == 90) { /* Z 進度條 */
+				if (e.code == 'KeyZ') { /* Z 進度條 */
 					if (framedoc.getElementsByClassName('jw-controls')[0].style.display !== 'none') {
 						framedoc.getElementsByClassName('jw-controls')[0].style.display = 'none';
 						framedoc.getElementsByClassName('jw-controls-backdrop')[0].style.display = 'none';
@@ -74,7 +74,7 @@ javascript: (function() {
 	function i_animeone_me() {
 		document.addEventListener('keyup', function(e) {
 			if (e.altKey) {
-				if (e.which == 90) { /* Z 進度條 */
+				if (e.code == 'KeyZ') { /* Z 進度條 */
 					if (document.getElementsByClassName('vjs-control-bar')[0].style.display !== 'none') {
 						document.getElementsByClassName('vjs-control-bar')[0].style.display = 'none';
 					} else {
@@ -88,7 +88,7 @@ javascript: (function() {
 	function v_anime1_me() {
 		document.addEventListener('keyup', function(e) {
 			if (e.altKey) {
-				if (e.which == 90) { /* Z 進度條 */
+				if (e.code == 'KeyZ') { /* Z 進度條 */
 					if (document.getElementsByClassName('jw-controlbar')[0].style.display !== 'none') {
 						document.getElementsByClassName('jw-controlbar')[0].style.display = 'none';
 					} else {
