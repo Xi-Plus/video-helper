@@ -6,8 +6,9 @@ javascript: (function() {
 	window.video_helper_loaded = true;
 
 	function video_callback(e) {
-		if (e.target.getElementsByTagName('video').length === 1) {
-			var video = e.target.getElementsByTagName('video')[0];
+		var videos = e.target.tagName === 'VIDEO' ? [e.target] : e.target.getElementsByTagName('video');
+		if (videos.length === 1) {
+			var video = videos[0];
 			if (e.altKey) {
 				if (e.key == 'ArrowRight') {
 					e.preventDefault();
